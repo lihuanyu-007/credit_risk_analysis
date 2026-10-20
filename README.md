@@ -13,19 +13,27 @@
 3. Tableau：制作交互式可视化仪表盘，对分析结果进行可视化展示，支持信贷风控业务决策。
 
 ## 项目目录
-```
-credit_risk_analysis/
+```tree
+├── assets/  #可视化截图资源文件夹
+│   ├── .gitkeep
+│   ├── 各等级贷款违约率.png
+│   ├── 各贷款目的违约率.png
+│   ├── 贷款等级×贷款用途.png
+│   └── dashboard_preview.png
 ├── data/
-│   └─ .gitkeep             
-├── sql/
-│   ├─ first_eda.sql          # 原始数据第一轮探查SQL
-│   └─ clean_data_analysis.sql # 清洗后数据集的违约率、交叉分析SQL
+│   └── .gitkeep
 ├── python/
-│   └─ data_clean.py          # Pandas数据清洗代码
-├── tableau/
-│   └─ .gitkeep               # 后续存放Tableau仪表盘文件
-├── README.md
-└─ .gitignore
+│   ├── .gitkeep
+│   └── data_clean.py  #数据清洗代码
+├── sql/
+│   ├── .gitkeep
+│   ├── first_eda.sql  
+│   └── clean_data_analysis.sql  #对数据进行详细业务分析
+├── tableau/ 
+│   ├── .gitkeep
+│   └── credit_risk_tableau.twbx
+├── conclusion.md   #分析结论与业务落地建议
+└── README.md
 ```
 
 ## 分析流程
@@ -37,7 +45,7 @@ credit_risk_analysis/
 
 ## 数据集来源
 kaggle credit_risk_dataset
-[数据下载地址]（https://www.kaggle.com/datasets/laotse/credit-risk-dataset）
+[数据下载地址](https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
 > 需要自行去Kaggle下载数据集，将CSV文件放置到本地`data/`文件夹，才能运行代码。
 > 本仓库只存放代码，不存储原始数据文件。
 
@@ -58,7 +66,7 @@ kaggle credit_risk_dataset
 
 ## 可视化成果
 Tableau交互式仪表盘
-[Dashboard地址](https://public.tableau.com/app/profile/huanyu.li5988/viz/credit_risk_tableau）
+![信贷风控仪表盘](./tableau/dashboard_preview.png)
 > 目前已完成核心分析图表及交互式仪表板，主要围绕贷款信用等级、贷款用途、住房类型、贷款收入占比及贷款利率等维度展开分析。
 
 ## 数据质量与局限性
